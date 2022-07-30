@@ -15,4 +15,9 @@
         android:name="com.example.computerstore.screens.welcome.WelcomeFragment"
         android:label="WelcomeFragment"
         tools:layout="@layout/welcome_fragment"/>
+    <fragment
+        android:id="@+id/instructionsFragment"
+        android:name="com.example.computerstore.screens.instructions.InstructionsFragment"
+        android:label="InstructionsFragment"
+        tools:layout="@layout/instructions_fragment" />
 </navigation>

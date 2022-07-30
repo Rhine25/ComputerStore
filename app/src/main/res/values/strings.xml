@@ -5,4 +5,6 @@
     <string name="welcome">Welcome to the Computer Store!</string>
     <string name="welcome_description">On the next page you will be provided with instructions to use the app\n</string>
     <string name="ok">OK</string>
+    <string name="instructions">Instructions</string>
+    <string name="instructions_description">These are the instructions for how to use the app</string>
 </resources>
