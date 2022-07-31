@@ -7,4 +7,5 @@
     <string name="ok">OK</string>
     <string name="instructions">Instructions</string>
     <string name="instructions_description">These are the instructions for how to use the app</string>
+    <string name="button_add_item">Button add item</string>
 </resources>

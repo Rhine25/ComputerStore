@@ -20,4 +20,9 @@
         android:name="com.example.computerstore.screens.instructions.InstructionsFragment"
         android:label="InstructionsFragment"
         tools:layout="@layout/instructions_fragment" />
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.computerstore.screens.list.ListFragment"
+        android:label="ListFragment"
+        tools:layout="@layout/list_fragment"/>
 </navigation>
