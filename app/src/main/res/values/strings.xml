@@ -8,4 +8,10 @@
     <string name="instructions">Instructions</string>
     <string name="instructions_description">These are the instructions for how to use the app</string>
     <string name="button_add_item">Button add item</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="computer_name">Computer name</string>
+    <string name="company">Company</string>
+    <string name="year">Year</string>
+    <string name="description">Description</string>
 </resources>

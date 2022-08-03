@@ -25,4 +25,9 @@
         android:name="com.example.computerstore.screens.list.ListFragment"
         android:label="ListFragment"
         tools:layout="@layout/list_fragment"/>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.computerstore.screens.detail.DetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/detail_fragment"/>
 </navigation>
