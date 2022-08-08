@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.computerstore.R
 import com.example.computerstore.databinding.LoginFragmentBinding
 
@@ -22,6 +23,13 @@ class LoginFragment : Fragment() {
             container,
             false
         )
+
+        binding.buttonLogin.setOnClickListener { v: View ->
+            v.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
+        }
+        binding.buttonSignIn.setOnClickListener { v: View ->
+            v.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
+        }
         return binding.root
     }
 

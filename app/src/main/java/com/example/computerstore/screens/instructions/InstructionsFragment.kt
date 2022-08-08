@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.computerstore.R
 import com.example.computerstore.databinding.InstructionsFragmentBinding
 
@@ -21,6 +22,10 @@ class InstructionsFragment : Fragment() {
             container,
             false
         )
+
+        binding.button.setOnClickListener { v: View ->
+            v.findNavController().navigate(InstructionsFragmentDirections.actionInstructionsFragmentToListFragment())
+        }
         return binding.root
     }
 }

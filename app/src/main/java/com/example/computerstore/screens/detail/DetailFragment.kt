@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.computerstore.R
 import com.example.computerstore.databinding.DetailFragmentBinding
 
@@ -22,6 +23,13 @@ class DetailFragment : Fragment() {
             container,
             false
         )
+
+        binding.buttonCancel.setOnClickListener { v: View ->
+            v.findNavController().navigate(DetailFragmentDirections.actionDetailFragmentToListFragment())
+        }
+        binding.buttonSave.setOnClickListener { v: View ->
+            v.findNavController().navigate(DetailFragmentDirections.actionDetailFragmentToListFragment())
+        }
         return binding.root
     }
 }

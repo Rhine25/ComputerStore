@@ -23,6 +23,10 @@ class ListFragment : Fragment() {
             false
         )
         setHasOptionsMenu(true)
+
+        binding.fab.setOnClickListener { v: View ->
+            v.findNavController().navigate(ListFragmentDirections.actionListFragmentToDetailFragment())
+        }
         return binding.root
     }
 
