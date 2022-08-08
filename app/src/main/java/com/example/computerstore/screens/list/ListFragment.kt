@@ -10,6 +10,7 @@ import com.example.computerstore.R
 import com.example.computerstore.databinding.ListFragmentBinding
 
 class ListFragment : Fragment() {
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

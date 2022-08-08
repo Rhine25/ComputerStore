@@ -9,25 +9,45 @@
         android:id="@+id/loginFragment"
         android:name="com.example.computerstore.screens.login.LoginFragment"
         android:label="LoginFragment"
-        tools:layout="@layout/login_fragment"/>
+        tools:layout="@layout/login_fragment">
+        <action
+            android:id="@+id/action_loginFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.example.computerstore.screens.welcome.WelcomeFragment"
         android:label="WelcomeFragment"
-        tools:layout="@layout/welcome_fragment"/>
+        tools:layout="@layout/welcome_fragment">
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionsFragment"
+            app:destination="@id/instructionsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/instructionsFragment"
         android:name="com.example.computerstore.screens.instructions.InstructionsFragment"
         android:label="InstructionsFragment"
-        tools:layout="@layout/instructions_fragment" />
+        tools:layout="@layout/instructions_fragment" >
+        <action
+            android:id="@+id/action_instructionsFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
     <fragment
         android:id="@+id/listFragment"
         android:name="com.example.computerstore.screens.list.ListFragment"
         android:label="ListFragment"
-        tools:layout="@layout/list_fragment"/>
+        tools:layout="@layout/list_fragment">
+        <action
+            android:id="@+id/action_listFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.example.computerstore.screens.detail.DetailFragment"
         android:label="DetailFragment"
-        tools:layout="@layout/detail_fragment"/>
+        tools:layout="@layout/detail_fragment">
+        <action
+            android:id="@+id/action_detailFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
 </navigation>

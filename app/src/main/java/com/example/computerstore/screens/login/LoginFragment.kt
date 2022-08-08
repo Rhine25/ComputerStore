@@ -16,14 +16,12 @@ class LoginFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         val binding: LoginFragmentBinding = DataBindingUtil.inflate(
             inflater,
             R.layout.login_fragment,
             container,
             false
         )
-
         return binding.root
     }
 
