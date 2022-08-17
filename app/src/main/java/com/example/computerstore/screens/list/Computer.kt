@@ -1,3 +1,3 @@
 package com.example.computerstore.screens.list
 
-data class Computer (val name: String, val company: String, val year: String, val description: String)
+data class Computer (var name: String = "", var company: String = "", var year: String = "", var description: String = "")

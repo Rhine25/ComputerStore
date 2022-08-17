@@ -29,18 +29,13 @@ class DetailFragment : Fragment() {
             false
         )
 
+        binding.computer = Computer()
+
         binding.buttonCancel.setOnClickListener { v: View ->
             v.findNavController().navigate(DetailFragmentDirections.actionDetailFragmentToListFragment())
         }
         binding.buttonSave.setOnClickListener { v: View ->
-            viewModel.addComputer(
-                Computer(
-                    binding.computerNameText.text.toString(),
-                    binding.companyText.text.toString(),
-                    binding.yearText.text.toString(),
-                    binding.descriptionText.text.toString()
-                )
-            )
+            viewModel.addComputer(binding.computer as Computer)
             v.findNavController().navigate(DetailFragmentDirections.actionDetailFragmentToListFragment())
         }
         return binding.root

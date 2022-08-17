@@ -12,16 +12,10 @@ class ComputerViewModel : ViewModel() {
         get() = _computers
 
     init {
-        Log.d("DEBUGCOMP", "ViewModel created")
         _computers.value = mutableListOf()
     }
 
     fun addComputer(computer: Computer) {
-        _computers.value?.add(computer)
-    }
-
-    override fun onCleared() {
-        Log.d("DEBUGCOMP", "ViewModel destroyed")
-        super.onCleared()
+        _computers.value!!.add(computer)
     }
 }

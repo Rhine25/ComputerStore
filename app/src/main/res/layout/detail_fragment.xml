@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="computer"
+            type="com.example.computerstore.screens.list.Computer" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -12,56 +18,52 @@
             android:id="@+id/computer_name_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
             android:text="@string/computer_name"
-            app:layout_constraintBottom_toTopOf="@+id/computer_name_text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/computer_name_text"
+            app:layout_constraintEnd_toStartOf="@+id/computer_name_text" />
 
         <EditText
             android:id="@+id/computer_name_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            app:layout_constraintBottom_toTopOf="@+id/company_label"
+            android:text="@={computer.name}"
+            app:layout_constraintBottom_toTopOf="@+id/company_text"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.75"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/computer_name_label" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/company_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
             android:text="@string/company"
-            app:layout_constraintBottom_toTopOf="@+id/company_text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/computer_name_text" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/company_text"
+            app:layout_constraintEnd_toStartOf="@+id/company_text" />
 
         <EditText
             android:id="@+id/company_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            app:layout_constraintBottom_toTopOf="@+id/year_label"
+            android:text="@={computer.company}"
+            app:layout_constraintBottom_toTopOf="@+id/year_text"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.75"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/company_label" />
+            app:layout_constraintTop_toBottomOf="@+id/computer_name_text" />
 
         <TextView
             android:id="@+id/year_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
             android:text="@string/year"
-            app:layout_constraintBottom_toTopOf="@+id/year_text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/company_text" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/year_text"
+            app:layout_constraintEnd_toStartOf="@+id/year_text" />
 
         <EditText
             android:id="@+id/year_text"
@@ -69,33 +71,33 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number"
-            app:layout_constraintBottom_toTopOf="@+id/description_label"
+            android:text="@={computer.year}"
+            app:layout_constraintBottom_toTopOf="@+id/description_text"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.75"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/year_label" />
+            app:layout_constraintTop_toBottomOf="@+id/company_text" />
 
         <TextView
             android:id="@+id/description_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
             android:text="@string/description"
-            app:layout_constraintBottom_toTopOf="@+id/description_text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/year_text" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/description_text"
+            app:layout_constraintEnd_toStartOf="@+id/description_text" />
 
         <EditText
             android:id="@+id/description_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:text="@={computer.description}"
             app:layout_constraintBottom_toTopOf="@+id/button_cancel"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.75"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/description_label" />
+            app:layout_constraintTop_toBottomOf="@+id/year_text" />
 
         <Button
             android:id="@+id/button_cancel"
