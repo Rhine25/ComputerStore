@@ -44,7 +44,7 @@
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.example.computerstore.screens.detail.DetailFragment"
-        android:label="DetailFragment"
+        android:label="@string/computer_store"
         tools:layout="@layout/detail_fragment">
         <action
             android:id="@+id/action_detailFragment_to_listFragment"

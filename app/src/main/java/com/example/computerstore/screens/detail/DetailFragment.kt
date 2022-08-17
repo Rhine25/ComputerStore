@@ -6,11 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import com.example.computerstore.R
 import com.example.computerstore.databinding.DetailFragmentBinding
+import com.example.computerstore.screens.list.Computer
+import com.example.computerstore.screens.list.ComputerViewModel
 
 class DetailFragment : Fragment() {
+
+    private val viewModel: ComputerViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,6 +33,14 @@ class DetailFragment : Fragment() {
             v.findNavController().navigate(DetailFragmentDirections.actionDetailFragmentToListFragment())
         }
         binding.buttonSave.setOnClickListener { v: View ->
+            viewModel.addComputer(
+                Computer(
+                    binding.computerNameText.text.toString(),
+                    binding.companyText.text.toString(),
+                    binding.yearText.text.toString(),
+                    binding.descriptionText.text.toString()
+                )
+            )
             v.findNavController().navigate(DetailFragmentDirections.actionDetailFragmentToListFragment())
         }
         return binding.root
